@@ -9,7 +9,6 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import reducers from './rootReducer';
 import routes, {AppRoutes} from './indexRoute';
 import createBrowserHistory from 'history/createBrowserHistory';
-import '../../../stylesheets/main.scss';//TODO: stylesheets alias
 
 const history = createBrowserHistory();
 
