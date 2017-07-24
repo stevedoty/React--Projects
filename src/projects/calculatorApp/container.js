@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
+
 import './calculatorApp.scss';
 
-
 class Calculator extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      'data': ''
+    }
+  }
 
+  handleOnClick(item){
+    const previous = this.state.data;
+    const data  =  previous + item.name;
+
+    this.setState({'data':data})
+
+  }
 
   render() {
     return (
@@ -11,26 +24,16 @@ class Calculator extends Component {
 
 
         <div className="Calculator-display-container">
-            <input className="Calculator-display"></input>
+            <input id="Calculator-display" value={this.state.data} />
         </div>
 
 
         <ul className="Calculator-keypad">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            {buttons.map((item) => {
+              return (
+                <button key={item.name} onClick={ () => this.handleOnClick(item) }>{item.name}</button>)
+            })}
+            yo
         </ul>
 
 
@@ -38,6 +41,10 @@ class Calculator extends Component {
     );
   }
 }
+
+
+
+
 
 let buttons = [
     {

@@ -1,8 +1,12 @@
+*{
+  box-sizing: border-box;
+}
 .Calculator-container{
   height: 100%;
   width: 100%;
   background: grey;
-  position: fixed;
+  margin: 0;
+  position: relative;
 }
 
 .Calculator-display-container{
@@ -14,22 +18,22 @@
   top:0;
   left:0;
 }
-
-.Calculator-display input{
+//
+#Calculator-display{
   height: 100%;
   width: 100%;
   border: none;
   outline: none;
-  margin: none;
-  padding: none;
-  border-radius: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
   background: lightblue;
   position: absolute;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
 }
-
+//
 .Calculator-keypad{
   height: 250px;
   width: 250px;
@@ -37,13 +41,8 @@
 
 }
 
-.Calculator-keypad{
-  height: 250px;
-  width: 250px;
-  background: darkgrey;
-}
-
-.Calculator-keypad li{
+//
+.Calculator-keypad button{
   display: inline-block;
   background: lightgreen;
 }

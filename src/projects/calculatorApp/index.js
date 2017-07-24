@@ -24,9 +24,7 @@ const createStoreWithMiddleware = compose(applyMiddleware(
 const store = createStoreWithMiddleware(reducers);
 
 ReactDOM.render(
-	<MuiThemeProvider theme="">
 		<Provider store={store}>
 			{AppRoutes(store)}
 		</Provider>
-	</MuiThemeProvider>
 	, document.querySelector('#react-app'));
