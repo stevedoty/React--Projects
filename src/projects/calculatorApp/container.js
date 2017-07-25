@@ -11,11 +11,14 @@ class Calculator extends Component {
   }
 
   handleOnClick(item){
-    const previous = this.state.data;
-    const data  =  previous + item.name;
-
-    this.setState({'data':data})
-
+    if(item.name == "="){
+      const equation = (eval(this.state.data))
+      this.setState({'data':equation})
+    }else{
+      const previous = this.state.data;
+      const equation  =  previous + item.name;
+      this.setState({'data':equation})
+    }
   }
 
   render() {
@@ -31,7 +34,7 @@ class Calculator extends Component {
         <ul className="Calculator-keypad">
             {buttons.map((item) => {
               return (
-                <button key={item.name} onClick={ () => this.handleOnClick(item) }>{item.name}</button>)
+                <button key={item.name} onClick={() => this.handleOnClick(item)}>{item.name}</button>)
             })}
             yo
         </ul>
@@ -41,10 +44,6 @@ class Calculator extends Component {
     );
   }
 }
-
-
-
-
 
 let buttons = [
     {
