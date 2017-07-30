@@ -12,9 +12,7 @@ class WebpackDevConfig extends WebpackBaseConfig {
 		this.config = {
 			devtool: 'cheap-module-source-map',
 			entry: {
-				app: [
-					'webpack-dev-server/client?http://0.0.0.0:8000/',
-					'webpack/hot/only-dev-server',
+				calculatorApp-v2: [
 					'./projects/calculatorApp/index.js'
 				]
 			},
