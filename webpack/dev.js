@@ -15,7 +15,7 @@ class WebpackDevConfig extends WebpackBaseConfig {
 				calculatorApp: [
 					'./projects/calculatorApp/index.js'
 				],
-				calculatorApp-v2: [
+				calculatorAppV2: [
 					'./projects/calculatorAppV2/index.js'
 				]
 			},
