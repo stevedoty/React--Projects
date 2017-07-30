@@ -90,7 +90,6 @@ class CalculatorV2 extends Component{
         value: next
       })
     } else if (operator) {
-      // debugger;
       const previous = value || 0;
       const computedValue = operations[operator](previous, next);
 
