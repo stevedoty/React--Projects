@@ -2,7 +2,7 @@ import React from 'react';
 import createHistory from 'history/createBrowserHistory';
 import { Switch } from 'react-router';
 
-import Calculator from './calculatorApp.js';
+import CalculatorV2 from './calculatorApp-v2.js';
 
 import {
 	BrowserRouter as Router,
@@ -16,7 +16,7 @@ const history = createHistory();
 export const AppRoutes = store => (
 	<Router history={history}>
 		<Switch>
-			<Route path="/calculatorV1" component={Calculator}/>
+			<Route path="/calculatorV2" component={CalculatorV2}/>
 		</Switch>
 	</Router>
 );

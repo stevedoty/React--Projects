@@ -12,8 +12,11 @@ class WebpackDevConfig extends WebpackBaseConfig {
 		this.config = {
 			devtool: 'cheap-module-source-map',
 			entry: {
-				calculatorApp-v2: [
+				calculatorApp: [
 					'./projects/calculatorApp/index.js'
+				],
+				calculatorApp-v2: [
+					'./projects/calculatorAppV2/index.js'
 				]
 			},
 			plugins: [
