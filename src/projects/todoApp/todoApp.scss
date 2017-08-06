@@ -14,6 +14,11 @@
   background:rgb(0, 188, 212);
 }
 
+#input::selection{
+  background:white;
+  color:rgb(0, 188, 212);
+}
+
 #header{
   height: 42px;
   width: 93%;
@@ -65,12 +70,14 @@
 .list-item{
   width: 95%;
   height: 42px;
-  background: #eee;
   margin: auto;
   margin-top: 10px;
-  font-weight: 200;
-  line-height: 42px;
-  text-indent: 20px;
+  font-weight: lighter;
+  padding-left: 20px;
+  background: rgba(0, 188, 212,.8);
+  color: white;
+  border-radius: 1px;
+  display: table;
 }
 
 #check, #delete{
@@ -79,11 +86,27 @@
   width: 42px;
   border: none;
   outline: none;
+  background: none;
+}
+
+#delete-icon, #done-icon{
+  color: white;
 }
 
 h4{
   width: 95%;
   margin: auto;
+  // margin-left: 10%;
   margin-top: 10px;
   font-weight: 300;
+  color: rgb(0, 188, 212);
+}
+
+p{
+  display: table-cell;
+  vertical-align: middle;
+}
+p::selection{
+  background:white;
+  color: rgb(0, 188, 212);
 }

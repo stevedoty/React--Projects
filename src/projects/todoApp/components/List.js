@@ -11,9 +11,9 @@ class List extends Component{
           {this.props.items.filter(x=>!x.done).map((item)=>{
             return(
               <div className='list-item' key={item.id} id={item.id} >
-                {item.name}
-                <button id='delete' onClick={(e)=>this.props.deleteItem(item)}><Delete /></button>
-                <button id='check' onClick={(e)=>this.props.markAsDone(item)}><Done /></button>
+                <p>{item.name}</p>
+                <button id='delete' onClick={(e)=>this.props.deleteItem(item)}><Delete id='delete-icon' /></button>
+                <button id='check' onClick={(e)=>this.props.markAsDone(item)}><Done id='done-icon' /></button>
               </div>
             )
           })}
@@ -24,9 +24,9 @@ class List extends Component{
           {this.props.items.filter(x=>x.done).map((item)=>{
             return(
               <div className='list-item' key={item.id} id={item.id} >
-                {item.name}
-                <button id='delete' onClick={(e)=>this.props.deleteItem(item)}><Delete /></button>
-                <button id='check' onClick={(e)=>this.props.markAsDone(item)}><Done /></button>
+                <p>{item.name}</p>
+                <button id='delete' onClick={(e)=>this.props.deleteItem(item)}><Delete id='delete-icon' /></button>
+                <button id='check' onClick={(e)=>this.props.markAsDone(item)}><Done id='done-icon' /></button>
               </div>
             )
           })}

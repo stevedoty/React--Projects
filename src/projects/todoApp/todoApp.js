@@ -8,59 +8,14 @@ TodoListApp structure
 
 App
   Header
-    new item
+    new item---add
+  List
+    item---done-delete
+    item---done-delete
   List
     item---done-delete
     item---done-delete
 */
-
-
-// class Header extends Component{
-//   render(){
-//     return(
-//       <div id='header-container'>
-//         <div id='header'>
-//           <input id='input' value={this.props.displayValue} onChange={this.props.handleChange} placeholder='add item here...'/>
-//           <button id='add' onClick={this.props.addItem}>Add</button>
-//         </div>
-//       </div>
-//     );
-//   }
-// }
-//
-// class List extends Component{
-//   render(){
-//     return(
-//       <div id='lists'>
-//         <div className='list todo-list'>
-//           <h4>Todo</h4>
-//           {this.props.items.filter(x=>!x.done).map((item)=>{
-//             return(
-//               <div className='list-item' key={item.id} id={item.id} done={item.done}>
-//                 {item.name}
-//                 <button id='delete' onClick={(e)=>this.props.deleteItem(item)}>remove</button>
-//                 <button id='check' onClick={(e)=>this.props.markAsDone(item)}>check</button>
-//               </div>
-//             )
-//           })}
-//         </div>
-//
-//         <div className='list done-list'>
-//           <h4>Completed</h4>
-//           {this.props.items.filter(x=>x.done).map((item)=>{
-//             return(
-//               <div className='list-item' key={item.id} id={item.id} done={item.done}>
-//                 {item.name}
-//                 <button id='delete' onClick={(e)=>this.props.deleteItem(item)}>remove</button>
-//                 <button id='check' onClick={(e)=>this.props.markAsDone(item)}>check</button>
-//               </div>
-//             )
-//           })}
-//         </div>
-//       </div>
-//     );
-//   }
-// }
 
 class TodoApp extends Component {
   constructor(props){
@@ -68,9 +23,13 @@ class TodoApp extends Component {
     this.state = {
       displayValue: '',
       todos: [
-                    {'name':'c++', 'id': Math.round(Math.random()*5675765765675), 'done': false},    
+                    {'name':'c++', 'id': Math.round(Math.random()*5675765765675), 'done': false},
                     {'name':'java', 'id': Math.round(Math.random()*5675765765675), 'done': false},
-                    {'name':'react', 'id': Math.round(Math.random()*5675765765675), 'done': false},
+                    {'name':'sql', 'id': Math.round(Math.random()*5675765765675), 'done': false},
+                    {'name':'css', 'id': Math.round(Math.random()*5675765765675), 'done': true},
+                    {'name':'html', 'id': Math.round(Math.random()*5675765765675), 'done': true},
+                    {'name':'react', 'id': Math.round(Math.random()*5675765765675), 'done': true},
+                    {'name':'javascript', 'id': Math.round(Math.random()*5675765765675), 'done': true},
                   ],
     };
     this.addItem = this.addItem.bind(this);
