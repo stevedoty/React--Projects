@@ -17,7 +17,11 @@ class WebpackDevConfig extends WebpackBaseConfig {
 				],
 				calculatorAppV2: [
 					'./projects/calculatorAppV2/index.js'
-				]
+				],
+				todoApp: [
+					'./projects/todoApp/index.js'
+				],
+				
 			},
 			plugins: [
 				new ExtractTextPlugin('bundle.css'),
