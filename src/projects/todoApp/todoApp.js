@@ -68,9 +68,9 @@ class TodoApp extends Component {
     this.state = {
       displayValue: '',
       todos: [
-                    {'name':'react', 'id': Math.round(Math.random()*5675765765675), 'done': false},
+                    {'name':'c++', 'id': Math.round(Math.random()*5675765765675), 'done': false},    
                     {'name':'java', 'id': Math.round(Math.random()*5675765765675), 'done': false},
-                    {'name':'c++', 'id': Math.round(Math.random()*5675765765675), 'done': false},
+                    {'name':'react', 'id': Math.round(Math.random()*5675765765675), 'done': false},
                   ],
     };
     this.addItem = this.addItem.bind(this);
@@ -80,7 +80,18 @@ class TodoApp extends Component {
   }
 
   addItem(item){
-    this.state.todos.unshift({name: this.state.displayValue, id: Math.round(Math.random()*5675765765675), done: false})
+    item.preventDefault()
+    this.state.todos.unshift({name: this.state.displayValue, id: Math.round(Math.random()*5675765765675), done: false});
+    function compare(a,b) {
+    if (a.name < b.name){
+        return -1;
+    } else if (a.name > b.name){
+          return 1;
+      }
+    return 0;
+    }
+
+    this.state.todos.sort(compare);
     this.setState({todos: this.state.todos, displayValue: ''})
   }
 

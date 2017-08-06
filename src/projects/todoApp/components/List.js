@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../todoApp.scss';
+import {Done, Delete} from 'material-ui-icons';
 
 class List extends Component{
   render(){
@@ -11,8 +12,8 @@ class List extends Component{
             return(
               <div className='list-item' key={item.id} id={item.id} >
                 {item.name}
-                <button id='delete' onClick={(e)=>this.props.deleteItem(item)}>remove</button>
-                <button id='check' onClick={(e)=>this.props.markAsDone(item)}>check</button>
+                <button id='delete' onClick={(e)=>this.props.deleteItem(item)}><Delete /></button>
+                <button id='check' onClick={(e)=>this.props.markAsDone(item)}><Done /></button>
               </div>
             )
           })}
@@ -24,8 +25,8 @@ class List extends Component{
             return(
               <div className='list-item' key={item.id} id={item.id} >
                 {item.name}
-                <button id='delete' onClick={(e)=>this.props.deleteItem(item)}>remove</button>
-                <button id='check' onClick={(e)=>this.props.markAsDone(item)}>check</button>
+                <button id='delete' onClick={(e)=>this.props.deleteItem(item)}><Delete /></button>
+                <button id='check' onClick={(e)=>this.props.markAsDone(item)}><Done /></button>
               </div>
             )
           })}
