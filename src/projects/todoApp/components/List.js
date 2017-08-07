@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 import '../todoApp.scss';
 import {Done, Delete} from 'material-ui-icons';
 
@@ -12,8 +13,8 @@ class List extends Component{
             return(
               <div className='list-item' key={item.id} id={item.id} >
                 <p>{item.name}</p>
-                <button id='delete' onClick={(e)=>this.props.deleteItem(item)}><Delete id='delete-icon' /></button>
-                <button id='check' onClick={(e)=>this.props.markAsDone(item)}><Done id='done-icon' /></button>
+                <button id='delete' onClick={(e)=>this.props.deleteItem(item)}><Delete id='delete-icon'/></button>
+                <button id='check' onClick={(e)=>this.props.markAsDone(item)}><Done id='done-icon'/></button>
               </div>
             )
           })}
@@ -25,8 +26,8 @@ class List extends Component{
             return(
               <div className='list-item' key={item.id} id={item.id} >
                 <p>{item.name}</p>
-                <button id='delete' onClick={(e)=>this.props.deleteItem(item)}><Delete id='delete-icon' /></button>
-                <button id='check' onClick={(e)=>this.props.markAsDone(item)}><Done id='done-icon' /></button>
+                <button id='delete' onClick={(e)=>this.props.deleteItem(item)}><Delete id='delete-icon'/></button>
+                <button id='check' onClick={(e)=>this.props.markAsDone(item)}><Done id='delete-icon'/></button>
               </div>
             )
           })}

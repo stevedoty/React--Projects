@@ -7,16 +7,16 @@
 #header-container{
   height: 70px;
   width: 100%;
-  background: #ddd;
   margin: 0;
   padding: 0;
   position: relative;
-  background:rgb(0, 188, 212);
+  background:#006;
+  box-shadow: 0 0 15px black;
 }
 
 #input::selection{
   background:white;
-  color:rgb(0, 188, 212);
+  color:#006;
 }
 
 #header{
@@ -56,14 +56,16 @@
   outline: none;
   border-radius: 20px;
   background: #fff;
+  cursor: pointer;
 }
 
 #add-icon{
-  color: rgb(0, 188, 212);
+  color: #006;
 }
 
 #list{
   width: 100%;
+  background: white;
 }
 
 
@@ -74,10 +76,11 @@
   margin-top: 10px;
   font-weight: lighter;
   padding-left: 20px;
-  background: rgba(0, 188, 212,.8);
+  background: #006;
   color: white;
   border-radius: 1px;
   display: table;
+  box-shadow: 1px 1px 5px grey;
 }
 
 #check, #delete{
@@ -91,6 +94,7 @@
 
 #delete-icon, #done-icon{
   color: white;
+  cursor:pointer;
 }
 
 h4{
@@ -99,7 +103,7 @@ h4{
   // margin-left: 10%;
   margin-top: 10px;
   font-weight: 300;
-  color: rgb(0, 188, 212);
+  color: #006;
 }
 
 p{
@@ -108,5 +112,5 @@ p{
 }
 p::selection{
   background:white;
-  color: rgb(0, 188, 212);
+  color: #006;
 }

@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+
 import '../todoApp.scss';
 import {Add} from 'material-ui-icons';
+
 
 class Header extends Component{
   render(){
